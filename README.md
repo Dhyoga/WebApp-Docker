@@ -1,2 +1,2 @@
 # Laravel-Docker
-Setup untuk mendeploy Laravel Web-App ke Docker
+Setup untuk mendeploy PHP Web-App ke Docker (Larvel/CodeIgniter/Native)
