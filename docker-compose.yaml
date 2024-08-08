@@ -1,8 +1,22 @@
-version: "3.7"
 services:
   webapp:
-    build: ./context
+    build: 
+      context: ./context
     ports:
-      - "80:80"
+      - "6969:80"
+    command: apache2-foreground
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: silat
+    ports:
+      - "3306:3306"
     volumes:
-      - ./app:/var/www/html
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
