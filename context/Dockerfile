@@ -10,7 +10,7 @@ RUN apt-get update && \
     # Instalasi Composer
     curl https://getcomposer.org/installer > /tmp/composer-setup.php && \
     php /tmp/composer-setup.php --filename composer --install-dir /usr/local/bin && \
-    docker-php-ext-install zip && \
+    docker-php-ext-install zip mysqli pdo pdo_mysql && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm /tmp/composer-setup.php
