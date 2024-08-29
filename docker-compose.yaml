@@ -4,7 +4,6 @@ services:
       context: ./context
     ports:
       - "6969:80"
-    command: apache2-foreground
     depends_on:
       - db
     networks:
